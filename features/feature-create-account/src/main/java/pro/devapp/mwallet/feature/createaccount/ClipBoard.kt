@@ -1,4 +1,4 @@
-package pro.devapp.mwallet.components
+package pro.devapp.mwallet.feature.createaccount
 
 import android.content.ClipData
 import android.content.ClipboardManager

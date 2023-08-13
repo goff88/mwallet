@@ -6,6 +6,7 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
+import pro.devapp.mwallet.data.AccountData
 import pro.devapp.mwallet.data.AccountInMemoryRepository
 import pro.devapp.mwallet.data.PassPhraseManager
 import pro.devapp.mwallet.navigation.NavigationAction
@@ -30,7 +31,11 @@ class WelcomeViewModel(
 
     private suspend fun loadAccountInfo(phrase: String) {
         val result = coreAPI.getAccountId(phrase)
-        accountInMemoryRepository.accountId = result
+        accountInMemoryRepository.accountId = AccountData(
+            id = result.id,
+            publicKey = result.publicKey,
+            address = result.address
+        )
         accountInMemoryRepository.passPhrase = phrase
         _navigationFlow.emit(NavigationAction.Wallet)
     }

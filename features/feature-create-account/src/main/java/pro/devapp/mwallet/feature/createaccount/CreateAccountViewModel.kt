@@ -1,4 +1,4 @@
-package pro.devapp.mwallet.screen.create
+package pro.devapp.mwallet.feature.createaccount
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -6,17 +6,18 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import pro.devapp.mwallet.components.ClipBoard
+import pro.devapp.mwallet.core.CoreAPI
+import pro.devapp.mwallet.data.AccountData
 import pro.devapp.mwallet.data.AccountInMemoryRepository
 import pro.devapp.mwallet.data.PassPhraseManager
 import java.util.Random
 
 class CreateAccountViewModel(
-    private val coreAPI: pro.devapp.mwallet.core.CoreAPI,
+    private val coreAPI: CoreAPI,
     private val accountInMemoryRepository: AccountInMemoryRepository,
     private val clipBoard: ClipBoard,
     private val passPhraseManager: PassPhraseManager
-): ViewModel() {
+) : ViewModel() {
 
     private val screenStateFlow = MutableStateFlow(CreateAccountScreenState("", "", ""))
     val screenState: StateFlow<CreateAccountScreenState>
@@ -27,7 +28,11 @@ class CreateAccountViewModel(
             val password = createPassPhrase()
             val result = coreAPI.getAccountId(password)
             passPhraseManager.savePhrase(password)
-            accountInMemoryRepository.accountId = result
+            accountInMemoryRepository.accountId = AccountData(
+                id = result.id,
+                publicKey = result.publicKey,
+                address = result.address
+            )
             accountInMemoryRepository.passPhrase = password
             screenStateFlow.emit(
                 CreateAccountScreenState(

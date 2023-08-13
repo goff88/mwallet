@@ -1,4 +1,4 @@
-package pro.devapp.mwallet.screen.create
+package pro.devapp.mwallet.feature.createaccount
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -17,7 +17,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import org.koin.androidx.compose.koinViewModel
 import pro.devapp.mwallet.navigation.NavigationAction
-
 
 @Composable
 fun CreateAccount(
