@@ -74,6 +74,7 @@ dependencies {
     implementation(project(":services:core"))
     implementation(project(":services:data"))
     implementation(project(":services:ui-kit"))
+    implementation(project(":services:navigation"))
 
     implementation(project(":features:feature-scan-qr"))
     implementation(project(":features:feature-account"))

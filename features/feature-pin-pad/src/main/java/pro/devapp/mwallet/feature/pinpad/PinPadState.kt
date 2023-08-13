@@ -1,4 +1,4 @@
-package pro.devapp.mwallet.screen.pin
+package pro.devapp.mwallet.feature.pinpad
 
 data class PinPadState(
     val pin: String = "",

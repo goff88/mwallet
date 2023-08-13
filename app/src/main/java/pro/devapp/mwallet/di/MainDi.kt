@@ -11,9 +11,9 @@ import pro.devapp.mwallet.data.AccountInMemoryRepository
 import pro.devapp.mwallet.data.EncryptedStorage
 import pro.devapp.mwallet.data.PassPhraseManager
 import pro.devapp.mwallet.data.PinManager
+import pro.devapp.mwallet.feature.pinpad.PinPadViewModel
 import pro.devapp.mwallet.screen.create.CreateAccountViewModel
 import pro.devapp.mwallet.screen.myqr.MyQrViewModel
-import pro.devapp.mwallet.screen.pin.PinPadViewModel
 import pro.devapp.mwallet.screen.sendmoney.SendMoneyViewModel
 import pro.devapp.mwallet.screen.signin.SignInViewModel
 import pro.devapp.mwallet.screen.wallet.WalletViewModel

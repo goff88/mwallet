@@ -23,6 +23,7 @@ include(":services:core")
 include(":services:ui-kit")
 include(":services:data")
 include(":services:network")
+include(":services:navigation")
 
 // Features
 include(":features:feature-pin-pad")

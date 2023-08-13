@@ -1,4 +1,4 @@
-package pro.devapp.mwallet.uikit
+package pro.devapp.mwallet.navigation
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

@@ -1,4 +1,4 @@
-package pro.devapp.mwallet.screen.pin
+package pro.devapp.mwallet.feature.pinpad
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
