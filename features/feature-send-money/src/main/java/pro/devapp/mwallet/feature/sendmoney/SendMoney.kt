@@ -1,10 +1,5 @@
-package pro.devapp.mwallet.screen.sendmoney
+package pro.devapp.mwallet.feature.sendmoney
 
-import android.app.Activity
-import android.content.Intent
-import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.ActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -27,28 +22,28 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import org.koin.androidx.compose.koinViewModel
-import pro.devapp.mwallet.feature.scanqr.QrScannerActivity
+import org.koin.compose.koinInject
+import pro.devapp.mwallet.api.qrscanner.QrScannerIntentFactory
+import pro.devapp.mwallet.api.qrscanner.QrScannerLauncherFactory
 import pro.devapp.mwallet.navigation.NavigationAction
 
 @Composable
 fun SendMoney(
     onNavigationAction: (action: NavigationAction) -> Unit
 ) {
+
+    val qrScannerIntentFactory: QrScannerIntentFactory = koinInject()
+
     val viewModel: SendMoneyViewModel = koinViewModel()
     val screenState = viewModel.screenState.collectAsState()
     val signInState = viewModel.navigationFlow.collectAsState(null)
 
     val focusManager = LocalFocusManager.current
 
-    val startForResult =
-        rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
-            if (result.resultCode == Activity.RESULT_OK) {
-                val intent = result.data
-                val result = intent?.getStringExtra("result")
-                viewModel.handleQrResult(result)
-            }
-        }
-    val intent = Intent(LocalContext.current, QrScannerActivity::class.java)
+    val startForResult = QrScannerLauncherFactory { result: String ->
+        viewModel.handleQrResult(result)
+    }
+    val intent = qrScannerIntentFactory.createIntent(LocalContext.current)
 
     LaunchedEffect(signInState.value) {
         signInState.value?.let {

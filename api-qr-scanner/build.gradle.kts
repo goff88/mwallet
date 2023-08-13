@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "pro.devapp.mwallet.feature.scanqr"
+    namespace = "pro.devapp.mwallet.api.qrscanner"
     compileSdk = 33
 
     defaultConfig {
@@ -30,15 +30,19 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.4.3"
+    }
 }
 
 dependencies {
 
     implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.9.0")
 
-    implementation("com.github.yuriy-budiyev:code-scanner:2.3.2")
-    implementation("com.github.fondesa:kpermissions:3.4.0")
-
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    implementation("androidx.navigation:navigation-compose:2.6.0")
 }

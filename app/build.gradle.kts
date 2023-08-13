@@ -75,8 +75,8 @@ dependencies {
     implementation(project(":services:data"))
     implementation(project(":services:ui-kit"))
     implementation(project(":services:navigation"))
+    implementation(project(":features:feature-qr-scanner"))
 
-    implementation(project(":features:feature-scan-qr"))
     implementation(project(":features:feature-account"))
     implementation(project(":features:feature-account-history"))
     implementation(project(":features:feature-create-account"))
@@ -84,6 +84,8 @@ dependencies {
     implementation(project(":features:feature-pin-pad"))
     implementation(project(":features:feature-send-money"))
     implementation(project(":features:feature-sign-in"))
+
+    implementation(project(":api-qr-scanner"))
 
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.9.0")
