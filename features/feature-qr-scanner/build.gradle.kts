@@ -39,6 +39,9 @@ dependencies {
     implementation("com.github.yuriy-budiyev:code-scanner:2.3.2")
     implementation("com.github.fondesa:kpermissions:3.4.0")
 
+    implementation("io.insert-koin:koin-android:3.4.0")
+    implementation("io.insert-koin:koin-androidx-compose:3.4.4")
+
     implementation(project(":api-qr-scanner"))
 
     testImplementation("junit:junit:4.13.2")

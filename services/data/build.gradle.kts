@@ -37,6 +37,8 @@ dependencies {
 
     implementation("io.github.osipxd:security-crypto-datastore-preferences:1.0.0-beta01")
 
+    implementation("io.insert-koin:koin-android:3.4.0")
+
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
 }
