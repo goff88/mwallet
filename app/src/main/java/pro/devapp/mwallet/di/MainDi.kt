@@ -19,7 +19,7 @@ import pro.devapp.mwallet.feature.myqr.MyQrViewModel
 import pro.devapp.mwallet.feature.pinpad.PinPadViewModel
 import pro.devapp.mwallet.feature.scanqr.QrScannerIntentFactoryImpl
 import pro.devapp.mwallet.feature.sendmoney.SendMoneyViewModel
-import pro.devapp.mwallet.screen.signin.SignInViewModel
+import pro.devapp.mwallet.feature.signin.SignInViewModel
 import pro.devapp.mwallet.screen.welcome.WelcomeViewModel
 
 val mainModule = module {
