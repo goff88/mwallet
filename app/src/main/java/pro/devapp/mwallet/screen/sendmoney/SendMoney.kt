@@ -27,7 +27,7 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import org.koin.androidx.compose.koinViewModel
-import pro.devapp.mwallet.QrScannerActivity
+import pro.devapp.mwallet.feature.scanqr.QrScannerActivity
 import pro.devapp.mwallet.navigation.NavigationAction
 
 @Composable

@@ -1,4 +1,4 @@
-package pro.devapp.mwallet.ui.theme
+package pro.devapp.mwallet.uikit
 
 import androidx.compose.ui.graphics.Color
 

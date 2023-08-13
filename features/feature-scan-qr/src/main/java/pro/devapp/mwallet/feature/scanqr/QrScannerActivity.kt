@@ -1,6 +1,6 @@
-package pro.devapp.mwallet
+package pro.devapp.mwallet.feature.scanqr
 
-import android.Manifest.permission.CAMERA
+import android.Manifest
 import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
@@ -59,7 +59,7 @@ class QrScannerActivity : FragmentActivity() {
 
     override fun onResume() {
         super.onResume()
-        permissionsBuilder(CAMERA).build().apply {
+        permissionsBuilder(Manifest.permission.CAMERA).build().apply {
             addListener { result ->
                 // Handle the result, for example check if all the requested permissions are granted.
                 if (result.allGranted()) {

@@ -71,11 +71,19 @@ dependencies {
 
     implementation("com.squareup.okhttp3:okhttp:4.11.0")
 
-    implementation("com.github.yuriy-budiyev:code-scanner:2.3.2")
-    implementation("com.github.fondesa:kpermissions:3.4.0")
-
     implementation(project(":services:core"))
     implementation(project(":services:data"))
+    implementation(project(":services:ui-kit"))
+
+    implementation(project(":features:feature-scan-qr"))
+    implementation(project(":features:feature-account"))
+    implementation(project(":features:feature-account-history"))
+    implementation(project(":features:feature-create-account"))
+    implementation(project(":features:feature-my-qr"))
+    implementation(project(":features:feature-pin-pad"))
+    implementation(project(":features:feature-send-money"))
+    implementation(project(":features:feature-sign-in"))
+
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.9.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")

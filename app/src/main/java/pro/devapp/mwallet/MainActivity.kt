@@ -19,7 +19,7 @@ import pro.devapp.mwallet.screen.sendmoney.SendMoney
 import pro.devapp.mwallet.screen.signin.SignIn
 import pro.devapp.mwallet.screen.wallet.Wallet
 import pro.devapp.mwallet.screen.welcome.Welcome
-import pro.devapp.mwallet.ui.theme.MWalletTheme
+import pro.devapp.mwallet.uikit.MWalletTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
