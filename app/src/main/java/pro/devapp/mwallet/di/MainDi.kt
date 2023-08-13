@@ -13,8 +13,8 @@ import pro.devapp.mwallet.feature.account.CmcAPI
 import pro.devapp.mwallet.feature.account.WalletViewModel
 import pro.devapp.mwallet.feature.createaccount.ClipBoard
 import pro.devapp.mwallet.feature.createaccount.CreateAccountViewModel
+import pro.devapp.mwallet.feature.myqr.MyQrViewModel
 import pro.devapp.mwallet.feature.pinpad.PinPadViewModel
-import pro.devapp.mwallet.screen.myqr.MyQrViewModel
 import pro.devapp.mwallet.screen.sendmoney.SendMoneyViewModel
 import pro.devapp.mwallet.screen.signin.SignInViewModel
 import pro.devapp.mwallet.screen.welcome.WelcomeViewModel

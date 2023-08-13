@@ -1,4 +1,4 @@
-package pro.devapp.mwallet.screen.myqr
+package pro.devapp.mwallet.feature.myqr
 
 import android.graphics.BitmapFactory
 import android.util.Base64
@@ -9,7 +9,6 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import pro.devapp.mwallet.core.CoreAPI
 import pro.devapp.mwallet.data.AccountInMemoryRepository
-
 
 class MyQrViewModel(
     private val coreAPI: CoreAPI,

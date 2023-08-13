@@ -1,4 +1,4 @@
-package pro.devapp.mwallet.screen.myqr
+package pro.devapp.mwallet.feature.myqr
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
