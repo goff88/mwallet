@@ -1,4 +1,4 @@
-package pro.devapp.mwallet.screen.wallet
+package pro.devapp.mwallet.feature.account
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -6,14 +6,13 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import pro.devapp.mwallet.components.CmcAPI
 import pro.devapp.mwallet.data.AccountInMemoryRepository
 
 class WalletViewModel(
     private val coreAPI: pro.devapp.mwallet.core.CoreAPI,
     private val cmcAPI: CmcAPI,
     private val accountInMemoryRepository: AccountInMemoryRepository
-): ViewModel() {
+) : ViewModel() {
 
     private val walletScreenState = MutableStateFlow(WalletScreenState("", 0.0, 0.0))
     val screenState: StateFlow<WalletScreenState>

@@ -1,4 +1,4 @@
-package pro.devapp.mwallet.components
+package pro.devapp.mwallet.feature.account
 
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
@@ -18,7 +18,7 @@ class CmcAPI {
     private val scope = CoroutineScope(Dispatchers.IO + SupervisorJob())
 
     suspend fun calculateBalance(amount: Double): Double {
-        return (amount * getCoinPrice()*100).toInt().toDouble()/100
+        return (amount * getCoinPrice() * 100).toInt().toDouble() / 100
     }
 
     @OptIn(ExperimentalStdlibApi::class)
@@ -47,23 +47,3 @@ class CmcAPI {
         }
     }
 }
-
-private data class CmcResponse (
-    val data: CmcData
-)
-
-private data class CmcData (
-    val PZM: List<CmcDataPZM>
-)
-
-private data class CmcDataPZM(
-    val quote: CmcDataPZMQuote
-)
-
-private data class CmcDataPZMQuote(
-    val RUB: CmcDataPZMQuoteRUB
-)
-
-private data class CmcDataPZMQuoteRUB(
-    val price: Double
-)

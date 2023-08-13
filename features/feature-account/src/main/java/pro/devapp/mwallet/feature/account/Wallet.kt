@@ -1,4 +1,4 @@
-package pro.devapp.mwallet.screen.wallet
+package pro.devapp.mwallet.feature.account
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer

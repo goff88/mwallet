@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import pro.devapp.mwallet.feature.account.Wallet
 import pro.devapp.mwallet.feature.createaccount.CreateAccount
 import pro.devapp.mwallet.feature.pinpad.PinPad
 import pro.devapp.mwallet.navigation.NavigationAction
@@ -17,7 +18,6 @@ import pro.devapp.mwallet.navigation.NavigationHandler
 import pro.devapp.mwallet.screen.myqr.MyQr
 import pro.devapp.mwallet.screen.sendmoney.SendMoney
 import pro.devapp.mwallet.screen.signin.SignIn
-import pro.devapp.mwallet.screen.wallet.Wallet
 import pro.devapp.mwallet.screen.welcome.Welcome
 import pro.devapp.mwallet.uikit.MWalletTheme
 

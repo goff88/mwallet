@@ -1,4 +1,4 @@
-package pro.devapp.mwallet.screen.wallet
+package pro.devapp.mwallet.feature.account
 
 data class WalletScreenState(
     val account: String,
