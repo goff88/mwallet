@@ -16,9 +16,9 @@ import pro.devapp.mwallet.feature.myqr.MyQr
 import pro.devapp.mwallet.feature.pinpad.PinPad
 import pro.devapp.mwallet.feature.sendmoney.SendMoney
 import pro.devapp.mwallet.feature.signin.SignIn
+import pro.devapp.mwallet.feature.signin.Welcome
 import pro.devapp.mwallet.navigation.NavigationAction
 import pro.devapp.mwallet.navigation.NavigationHandler
-import pro.devapp.mwallet.screen.welcome.Welcome
 import pro.devapp.mwallet.uikit.MWalletTheme
 
 class MainActivity : ComponentActivity() {

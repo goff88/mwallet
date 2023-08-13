@@ -1,4 +1,4 @@
-package pro.devapp.mwallet.screen.welcome
+package pro.devapp.mwallet.feature.signin
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
