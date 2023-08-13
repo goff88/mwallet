@@ -1,6 +1,6 @@
 package pro.devapp.mwallet.feature.account
 
-data class WalletScreenState(
+internal data class WalletScreenState(
     val account: String,
     val balance: Double,
     val balanceRUB: Double

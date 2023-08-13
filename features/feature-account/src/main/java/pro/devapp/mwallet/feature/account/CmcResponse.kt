@@ -4,18 +4,18 @@ internal data class CmcResponse(
     val data: CmcData
 )
 
-data class CmcData(
+internal data class CmcData(
     val PZM: List<CmcDataPZM>
 )
 
-data class CmcDataPZM(
+internal data class CmcDataPZM(
     val quote: CmcDataPZMQuote
 )
 
-data class CmcDataPZMQuote(
+internal data class CmcDataPZMQuote(
     val RUB: CmcDataPZMQuoteRUB
 )
 
-data class CmcDataPZMQuoteRUB(
+internal data class CmcDataPZMQuoteRUB(
     val price: Double
 )

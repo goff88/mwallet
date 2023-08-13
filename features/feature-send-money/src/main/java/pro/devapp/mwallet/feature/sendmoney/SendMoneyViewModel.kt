@@ -12,8 +12,7 @@ import pro.devapp.mwallet.core.CoreAPI
 import pro.devapp.mwallet.data.AccountInMemoryRepository
 import pro.devapp.mwallet.navigation.NavigationAction
 
-//PRIZM-TE8N-B3VM-JJQH-5NYJB - Genesis
-class SendMoneyViewModel(
+internal class SendMoneyViewModel(
     private val coreAPI: CoreAPI,
     private val accountInMemoryRepository: AccountInMemoryRepository
 ) : ViewModel() {
@@ -35,7 +34,7 @@ class SendMoneyViewModel(
                     recipientAccount = account
                 )
             )
-            if (account.length == "PRIZM-6TLW-U2GA-FSWY-4CEYG".length) {
+            if (account.length == "PRIZM-TE8N-B3VM-JJQH-5NYJB".length) {
                 loadRecipientInfo(account)
             } else if (_screenState.value.needPublicKey) {
                 _screenState.emit(

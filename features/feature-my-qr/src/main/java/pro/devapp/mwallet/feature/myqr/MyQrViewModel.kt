@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 import pro.devapp.mwallet.core.CoreAPI
 import pro.devapp.mwallet.data.AccountInMemoryRepository
 
-class MyQrViewModel(
+internal class MyQrViewModel(
     private val coreAPI: CoreAPI,
     private val accountInMemoryRepository: AccountInMemoryRepository
 ) : ViewModel() {

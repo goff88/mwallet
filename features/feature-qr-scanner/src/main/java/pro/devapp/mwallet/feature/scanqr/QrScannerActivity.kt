@@ -13,7 +13,7 @@ import com.budiyev.android.codescanner.ScanMode
 import com.fondesa.kpermissions.allGranted
 import com.fondesa.kpermissions.extension.permissionsBuilder
 
-class QrScannerActivity : FragmentActivity() {
+internal class QrScannerActivity : FragmentActivity() {
 
     private lateinit var codeScanner: CodeScanner
     override fun onCreate(savedInstanceState: Bundle?) {

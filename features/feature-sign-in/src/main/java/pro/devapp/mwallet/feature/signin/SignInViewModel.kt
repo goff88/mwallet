@@ -14,7 +14,7 @@ import pro.devapp.mwallet.data.AccountInMemoryRepository
 import pro.devapp.mwallet.data.PassPhraseManager
 import pro.devapp.mwallet.navigation.NavigationAction
 
-class SignInViewModel(
+internal class SignInViewModel(
     private val coreAPI: pro.devapp.mwallet.core.CoreAPI,
     private val accountInMemoryRepository: AccountInMemoryRepository,
     private val passPhraseManager: PassPhraseManager

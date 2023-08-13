@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import pro.devapp.mwallet.data.AccountInMemoryRepository
 
-class WalletViewModel(
+internal class WalletViewModel(
     private val coreAPI: pro.devapp.mwallet.core.CoreAPI,
     private val cmcAPI: CmcAPI,
     private val accountInMemoryRepository: AccountInMemoryRepository

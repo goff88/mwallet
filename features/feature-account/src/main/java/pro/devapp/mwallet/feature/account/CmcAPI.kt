@@ -13,7 +13,7 @@ import okhttp3.Request
 import okhttp3.Response
 import pro.devapp.mwallet.core.http.HttpClientFactory
 
-class CmcAPI {
+internal class CmcAPI {
 
     private val scope = CoroutineScope(Dispatchers.IO + SupervisorJob())
 

@@ -12,7 +12,7 @@ import pro.devapp.mwallet.data.AccountInMemoryRepository
 import pro.devapp.mwallet.data.PassPhraseManager
 import java.util.Random
 
-class CreateAccountViewModel(
+internal class CreateAccountViewModel(
     private val coreAPI: CoreAPI,
     private val accountInMemoryRepository: AccountInMemoryRepository,
     private val clipBoard: ClipBoard,

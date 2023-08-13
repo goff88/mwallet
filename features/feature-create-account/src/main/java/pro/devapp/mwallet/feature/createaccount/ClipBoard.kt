@@ -6,7 +6,7 @@ import android.content.Context
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 
-class ClipBoard(
+internal class ClipBoard(
     private val context: Context
 ) {
 

@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 import pro.devapp.mwallet.data.PinManager
 import pro.devapp.mwallet.navigation.NavigationAction
 
-class PinPadViewModel(
+internal class PinPadViewModel(
     private val pinManager: PinManager
 ) : ViewModel() {
 
